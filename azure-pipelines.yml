@@ -25,6 +25,7 @@ steps:
     repository: 'bankapp'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
+    tags: 
 - task: KubernetesManifest@1
   continueOnError: true
   inputs:
