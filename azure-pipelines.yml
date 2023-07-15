@@ -32,7 +32,7 @@ steps:
     azureSubscriptionConnection: 'Free Trial(ff7f71a9-3b53-465a-8513-496712aca8f8)'
     azureResourceGroup: 'Practiceresource'
     kubernetesCluster: 'Capstone1'
-    arguments: 'kubectl delete deploy orbitbankapp'
+    arguments: 'deploy orbitbankapp'
 - task: KubernetesManifest@1
   inputs:
     action: 'delete'
@@ -40,7 +40,7 @@ steps:
     azureSubscriptionConnection: 'Free Trial(ff7f71a9-3b53-465a-8513-496712aca8f8)'
     azureResourceGroup: 'Practiceresource'
     kubernetesCluster: 'Capstone1'
-    arguments: 'kubectl delete svc orbitbankapp'
+    arguments: 'svc orbitbankapp'
 - task: KubernetesManifest@1
   inputs:
     action: 'deploy'
