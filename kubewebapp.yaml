@@ -19,7 +19,7 @@ spec:
         app: orbitbankapp
     spec:
       containers:
-      - image: docker.io/kotianrakshith/orbitbankapp
+      - image: rakshithdevops.azurecr.io/bankapp
         name: orbitbankapp
         resources: {}
 status: {}
@@ -39,7 +39,7 @@ spec:
     targetPort: 8989
     nodePort: 32000
   selector:
-    app: orbitbankapp
+    app: LoadBalancer
   type: NodePort
 status:
   loadBalancer: {}
