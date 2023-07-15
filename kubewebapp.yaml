@@ -19,7 +19,7 @@ spec:
         app: orbitbankapp
     spec:
       containers:
-      - image: bankapp
+      - image: rakshithdevops.azurecr.io/bankapp:latest
         name: orbitbankapp
         resources: {}
 status: {}
