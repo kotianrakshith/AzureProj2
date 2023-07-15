@@ -26,6 +26,7 @@ steps:
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
 - task: KubernetesManifest@1
+  continueOnError: true
   inputs:
     action: 'delete'
     connectionType: 'azureResourceManager'
@@ -33,8 +34,8 @@ steps:
     azureResourceGroup: 'Practiceresource'
     kubernetesCluster: 'Capstone1'
     arguments: 'deploy orbitbankapp'
-    continueOnError: true
 - task: KubernetesManifest@1
+  continueOnError: true
   inputs:
     action: 'delete'
     connectionType: 'azureResourceManager'
@@ -42,7 +43,7 @@ steps:
     azureResourceGroup: 'Practiceresource'
     kubernetesCluster: 'Capstone1'
     arguments: 'svc orbitbankapp'
-    continueOnError: true
+    
 - task: KubernetesManifest@1
   inputs:
     action: 'deploy'
