@@ -33,6 +33,7 @@ steps:
     azureResourceGroup: 'Practiceresource'
     kubernetesCluster: 'Capstone1'
     arguments: 'deploy orbitbankapp'
+    continueOnError: true
 - task: KubernetesManifest@1
   inputs:
     action: 'delete'
@@ -41,6 +42,7 @@ steps:
     azureResourceGroup: 'Practiceresource'
     kubernetesCluster: 'Capstone1'
     arguments: 'svc orbitbankapp'
+    continueOnError: true
 - task: KubernetesManifest@1
   inputs:
     action: 'deploy'
