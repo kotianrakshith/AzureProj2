@@ -19,7 +19,7 @@ spec:
         app: orbitbankapp
     spec:
       containers:
-      - image: rakshithdevops.azurecr.io/bankapp
+      - image: bankapp
         name: orbitbankapp
         resources: {}
 status: {}
@@ -37,7 +37,6 @@ spec:
   - port: 8989
     protocol: TCP
     targetPort: 8989
-    nodePort: 32000
   selector:
     app: orbitbankapp
   type: LoadBalancer
