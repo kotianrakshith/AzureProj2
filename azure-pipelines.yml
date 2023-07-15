@@ -19,3 +19,8 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
+- task: Docker@2
+  inputs:
+    containerRegistry: 'rakshithdevops'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
