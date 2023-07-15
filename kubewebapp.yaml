@@ -39,8 +39,8 @@ spec:
     targetPort: 8989
     nodePort: 32000
   selector:
-    app: LoadBalancer
-  type: NodePort
+    app: orbitbankapp
+  type: LoadBalancer
 status:
   loadBalancer: {}
 
